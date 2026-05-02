@@ -40,6 +40,38 @@
     #startBtn:hover {
       background: #e6005c;
     }
+    #questionBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#questionText {
+  margin-bottom: 15px;
+}
+
+#answerInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+#questionBox button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+}
   </style>
 </head>
 
@@ -47,7 +79,15 @@
 
 <div id="container">
   <img src="birthday.png">
-<button id="startBtn" onclick="start()">Start 💖</button>
+  <button id="startBtn" onclick="start()">Start 💖</button>
+
+  <!-- 👇 ADD THIS HERE -->
+  <div id="questionBox" style="display:none;">
+    <h2 id="questionText">Question here</h2>
+    <input type="text" id="answerInput" placeholder="Type your answer..." />
+    <button onclick="nextQuestion()">Next ➡️</button>
+  </div>
+
 </div>
   <script>
 function start() {
