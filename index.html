@@ -90,15 +90,36 @@
 
 </div>
   <script>
+let answers = [];
+let currentQ = 0;
+
+let questions = [
+  "What is your favorite color? 🎨",
+  "What is your favorite food? 🍕"
+];
+
 function start() {
-  askQ1();
+  document.getElementById("startBtn").style.display = "none";
+  document.getElementById("questionBox").style.display = "block";
+  showQuestion();
 }
 
-function askQ1() {
-  let answer = prompt("Q1: What is your favorite color? 🎨");
+function showQuestion() {
+  document.getElementById("questionText").innerText = questions[currentQ];
+  document.getElementById("answerInput").value = "";
+}
 
-  if (answer) {
-    alert("Nice choice 😀");
+function nextQuestion() {
+  let ans = document.getElementById("answerInput").value;
+  answers.push(ans);
+
+  currentQ++;
+
+  if (currentQ < questions.length) {
+    showQuestion();
+  } else {
+    document.getElementById("questionBox").innerHTML = "Done 🎉";
+    console.log(answers);
   }
 }
 </script>
