@@ -91,10 +91,17 @@
   <button id="startBtn" onclick="start()">Start 💖</button>
 
   <!-- 👇 ADD THIS HERE -->
-  <div id="questionBox" style="display:none;">
-    <h2 id="questionText">Question here</h2>
-    <input type="text" id="answerInput" placeholder="Type your answer..." />
-    <button onclick="nextQuestion()">Next ➡️</button>
+  <h2 id="questionText" style="display:none; position:absolute; top:22%; width:100%; text-align:center; color:white; font-size:28px;"></h2>
+
+<input id="answerInput" type="text" placeholder="Type your answer..."
+style="display:none; position:absolute; top:65%; left:50%; transform:translateX(-50%);
+padding:15px; width:70%; border-radius:25px; border:none; text-align:center;">
+
+<button id="nextBtn" onclick="nextQuestion()"
+style="display:none; position:absolute; top:75%; left:50%; transform:translateX(-50%);
+padding:12px 30px; border:none; border-radius:25px; background:#ff4d6d; color:white;">
+Next ➡️
+</button>
   </div>
 
 </div>
@@ -108,8 +115,14 @@ let questions = [
 ];
 
 function start() {
+  document.querySelector("img").src = "question.png";
+
   document.getElementById("startBtn").style.display = "none";
-  document.getElementById("questionBox").style.display = "block";
+
+  document.getElementById("questionText").style.display = "block";
+  document.getElementById("answerInput").style.display = "block";
+  document.getElementById("nextBtn").style.display = "block";
+
   showQuestion();
 }
 
