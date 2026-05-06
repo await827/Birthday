@@ -129,7 +129,6 @@ let currentQ = 0;
 
 let questions = [
   "What is your favorite color? 🎨",
-  let questions = [
   "What’s your biggest achievement this year? 😌"
 ];
 
@@ -159,6 +158,10 @@ function showQuestion() {
     document.getElementById("options").style.display = "block";
   }
 }
+function chooseAnswer() {
+  alert("Meeting me is the right answer 💖😌");
+}
+
 
 function nextQuestion() {
   let ans = document.getElementById("answerInput").value;
@@ -172,9 +175,7 @@ function nextQuestion() {
     document.getElementById("questionBox").innerHTML = "Done 🎉";
     console.log(answers);
   }
-  function chooseAnswer() {
-  alert("Meeting me is the right answer 💖😌");
-  }
+
 }
 </script>
 </body>
