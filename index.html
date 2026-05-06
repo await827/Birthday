@@ -40,7 +40,9 @@
     #startBtn:hover {
       background: #e6005c;
     }
-  #questionBox {
+
+#questionBox {
+  display: none; /* keep this initially */
   position: absolute;
   top: 0;
   left: 0;
@@ -48,11 +50,10 @@
   height: 100%;
   background: white;
 
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+  flex-direction: column;
+}
 
 #questionText {
   margin-bottom: 15px;
@@ -102,7 +103,7 @@ let questions = [
 
 function start() {
   document.getElementById("startBtn").style.display = "none";
-  document.getElementById("questionBox").style.display = "block";
+  document.getElementById("questionBox").style.display = "flex";
   showQuestion();
 }
 
