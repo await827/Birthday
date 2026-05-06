@@ -8,7 +8,34 @@
       margin: 0;
       font-family: Arial;
     }
+   #options {
+  display: none;
+  position: absolute;
+  top: 60%;
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#options button {
+  width: 85%;
+  height: 60px;
+  font-size: 18px;
+
+  border-radius: 30px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
     #container {
       position: relative;
       width: 100%;
@@ -109,13 +136,12 @@ padding:18px 50px; border:none; border-radius:35px; background:#ff4d6d; color:wh
 Next ➡️
 </button>
 
-  <div id="options" style="display:none; position:absolute; top:55%; width:100%; text-align:center;">
+<div id="options">
+  <button onclick="chooseAnswer()">Surviving your own decision</button>
 
-  <button onclick="chooseAnswer()">Surviving your own decision</button><br><br>
+  <button onclick="chooseAnswer()">Eating and doing nothing</button>
 
-  <button onclick="chooseAnswer()">Eating and doing nothing</button><br><br>
-
-  <button onclick="chooseAnswer()">Driving licence</button><br><br>
+  <button onclick="chooseAnswer()">Driving licence</button>
 
   <button onclick="chooseAnswer()">Meeting me</button>
 
