@@ -87,7 +87,7 @@
 <body>
 
 <div id="container">
-  <img src="birthday.png">
+  <img id="mainImage" src="birthday.png">
   <button id="startBtn" onclick="start()">Start 💖</button>
 
   <!-- 👇 ADD THIS HERE -->
@@ -103,8 +103,7 @@ padding:12px 30px; border:none; border-radius:25px; background:#ff4d6d; color:wh
 Next ➡️
 </button>
   </div>
-
-</div>
+  
   <script>
 let answers = [];
 let currentQ = 0;
@@ -115,8 +114,8 @@ let questions = [
 ];
 
 function start() {
-  document.querySelector("img").src = "question.png";
-
+  document.getElementById("mainImage").src = "question.png";
+  
   document.getElementById("startBtn").style.display = "none";
 
   document.getElementById("questionText").style.display = "block";
