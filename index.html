@@ -184,7 +184,8 @@ let questions = [
   "What is your favorite color? 🎨",
   "What’s your biggest achievement this year?",
   "Why can’t we see you outside at night?",
-   "Rate my husbyyy 💖"
+   "Rate my husbyyy 💖",
+   "So Miss Independent what’s one thing you still need help with but won’t admit?"
 ];
 
 function start() {
@@ -262,6 +263,16 @@ function showQuestion() {
       <button onclick="finishQuestion()">Gorgus 💖</button>
     `;
   }
+  // QUESTION 5
+else if (currentQ === 4) {
+
+  document.getElementById("options").style.display = "none";
+
+  document.getElementById("answerInput").style.display = "block";
+  document.getElementById("nextBtn").style.display = "block";
+
+  document.getElementById("answerInput").value = "";
+}
 }  
 function chooseAnswer() {
 
