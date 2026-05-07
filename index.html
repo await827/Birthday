@@ -186,7 +186,8 @@ let questions = [
   "Why can’t we see you outside at night?",
    "Rate my husbyyy 💖",
    "So<br>Miss Independent what’s one<br>thing you still need help with<br>but won’t admit?",
-   "Who is your Best friend? 💖"
+   "Who is your Best friend? 💖",
+  "What’s your most unnecessary talent that nobody asked for?"
 ];
 
 function start() {
@@ -284,6 +285,16 @@ else if (currentQ === 5) {
 
   document.getElementById("answerInput").value = "";
 }
+  // QUESTION 7
+else if (currentQ === 6) {
+
+  document.getElementById("options").style.display = "none";
+
+  document.getElementById("answerInput").style.display = "block";
+  document.getElementById("nextBtn").style.display = "block";
+
+  document.getElementById("answerInput").value = "";
+}
 }  
 function chooseAnswer() {
 
@@ -369,12 +380,14 @@ function nextQuestion() {
   // QUESTION 6 POPUP
   if (currentQ === 5) {
 
-    document.getElementById("popupText").innerText =
-      "I know it's me I'm just asking for formalities 😌💖";
+  document.getElementById("popupText").innerText =
+    "I know it's me I'm just asking for formalities 😌💖";
 
-    document.getElementById("popup").style.display = "block";
+  document.getElementById("popup").style.display = "block";
 
-    return;
+  currentQ++;
+
+  return;
   }
 
   currentQ++;
