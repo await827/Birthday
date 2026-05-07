@@ -185,7 +185,8 @@ let questions = [
   "What’s your biggest achievement this year?",
   "Why can’t we see you outside at night?",
    "Rate my husbyyy 💖",
-   "So<br>Miss Independent what’s one<br>thing you still need help with<br>but won’t admit?"
+   "So<br>Miss Independent what’s one<br>thing you still need help with<br>but won’t admit?",
+   "Who is your Best friend? 💖"
 ];
 
 function start() {
@@ -273,6 +274,16 @@ else if (currentQ === 4) {
 
   document.getElementById("answerInput").value = "";
 }
+  // QUESTION 6
+else if (currentQ === 5) {
+
+  document.getElementById("options").style.display = "none";
+
+  document.getElementById("answerInput").style.display = "block";
+  document.getElementById("nextBtn").style.display = "block";
+
+  document.getElementById("answerInput").value = "";
+}
 }  
 function chooseAnswer() {
 
@@ -305,14 +316,17 @@ document.getElementById("popup").style.display = "block";
   }
 }
 function closePopup() {
+
   document.getElementById("popup").style.display = "none";
 
-  currentQ++;
+  if (currentQ === 5) {
+    currentQ++;
+  }
 
   if (currentQ < questions.length) {
     showQuestion();
   } else {
-    
+
     document.getElementById("options").style.display = "none";
   }
 }
@@ -347,8 +361,20 @@ function finishQuestion() {
   }
 }
 function nextQuestion() {
+
   let ans = document.getElementById("answerInput").value;
   answers.push(ans);
+
+  // QUESTION 6 POPUP
+  if (currentQ === 5) {
+
+    document.getElementById("popupText").innerText =
+      "I know it's me I'm just asking for formalities 😌💖";
+
+    document.getElementById("popup").style.display = "block";
+
+    return;
+  }
 
   currentQ++;
 
@@ -357,6 +383,7 @@ function nextQuestion() {
   } else {
     console.log(answers);
   }
+}
 
 }
 </script>
