@@ -183,7 +183,7 @@ let currentQ = 0;
 let questions = [
   "What is your favorite color? 🎨",
   "What’s your biggest achievement this year?",
-  "Why can’t we see you outside at night?"
+  "Why can’t we see you outside at night?",
    "Rate my husbyyy 💖"
 ];
 
@@ -200,54 +200,66 @@ function start() {
 }
 
 function showQuestion() {
+
   document.getElementById("questionText").innerText = questions[currentQ];
 
+  // QUESTION 1
   if (currentQ === 0) {
+
     document.getElementById("answerInput").style.display = "block";
     document.getElementById("nextBtn").style.display = "block";
     document.getElementById("options").style.display = "none";
-  } 
+  }
+
+  // QUESTION 2
   else if (currentQ === 1) {
-  document.getElementById("answerInput").style.display = "none";
-  document.getElementById("nextBtn").style.display = "none";
-  document.getElementById("options").style.display = "flex";
 
-  // 👉 OPTIONS FOR QUESTION 2
-  document.getElementById("options").innerHTML = `
-    <button onclick="chooseAnswer()">Surviving your own decision</button>
-    <button onclick="chooseAnswer()">Eating and doing nothing</button>
-    <button onclick="chooseAnswer()">Driving licence</button>
-    <button onclick="chooseAnswer()">Meeting me</button>
-  `;
+    document.getElementById("answerInput").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("options").style.display = "flex";
+
+    document.getElementById("options").innerHTML = `
+      <button onclick="chooseAnswer()">Surviving your own decision</button>
+      <button onclick="chooseAnswer()">Eating and doing nothing</button>
+      <button onclick="chooseAnswer()">Driving licence</button>
+      <button onclick="chooseAnswer()">Meeting me</button>
+    `;
   }
+
+  // QUESTION 3
   else if (currentQ === 2) {
-  document.getElementById("answerInput").style.display = "none";
-  document.getElementById("nextBtn").style.display = "none";
-  document.getElementById("options").style.display = "flex";
 
-  // 👉 OPTIONS FOR QUESTION 3
-  document.getElementById("options").innerHTML = `
-    <button onclick="chooseAnswer()">Studying</button>
-    <button onclick="chooseAnswer()">Dark magic</button>
-    <button onclick="chooseAnswer()">Sleeping</button>
-    <button onclick="chooseAnswer()">You're Batman 🦇</button>
-  `;
-    else if (currentQ === 3) {
-  document.getElementById("answerInput").style.display = "none";
-  document.getElementById("nextBtn").style.display = "none";
-  document.getElementById("options").style.display = "flex";
+    document.getElementById("answerInput").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("options").style.display = "flex";
 
-  document.getElementById("options").innerHTML = `
-    <img src="husband.jpg" style="width:80%; border-radius:20px; margin-bottom:15px;">
-
-    <button onclick="rateHim('10/10')">10/10 💯</button>
-    <button onclick="rateHim('Sexy')">Sexy 😌</button>
-    <button onclick="rateHim('100/10')">100/10 🔥</button>
-    <button onclick="rateHim('Gorgeous')">Gorgeous 💖</button>
-  `;
+    document.getElementById("options").innerHTML = `
+      <button onclick="chooseAnswer()">Studying</button>
+      <button onclick="chooseAnswer()">Dark magic</button>
+      <button onclick="chooseAnswer()">Sleeping</button>
+      <button onclick="chooseAnswer()">You're Batman 🦇</button>
+    `;
   }
+
+  // QUESTION 4
+  else if (currentQ === 3) {
+
+    document.getElementById("answerInput").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("options").style.display = "flex";
+
+    document.getElementById("options").innerHTML = `
+      <img src="husband.jpg"
+      style="width:250px; height:250px; object-fit:cover;
+      border-radius:20px; margin-bottom:15px;">
+
+      <button onclick="finishQuestion()">10/10 💯</button>
+      <button onclick="finishQuestion()">Sexyy 😌</button>
+      <button onclick="finishQuestion()">100/10 🔥</button>
+      <button onclick="finishQuestion()">Gorgus 💖</button>
+    `;
   }
-}
+}  
 function chooseAnswer() {
 
   // QUESTION 2 → SHOW POPUP
