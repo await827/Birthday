@@ -265,7 +265,7 @@ function showQuestion() {
   }
   // QUESTION 5
 else if (currentQ === 4) {
-
+   document.getElementById("options").style.top = "60%";
   document.getElementById("options").style.display = "none";
 
   document.getElementById("answerInput").style.display = "block";
@@ -316,7 +316,20 @@ function closePopup() {
     document.getElementById("options").style.display = "none";
   }
 }
+function finishQuestion() {
 
+  currentQ++;
+
+  if (currentQ < questions.length) {
+    showQuestion();
+  } else {
+
+    document.getElementById("options").style.display = "none";
+    document.getElementById("questionText").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("answerInput").style.display = "none";
+  }
+}
 function nextQuestion() {
   let ans = document.getElementById("answerInput").value;
   answers.push(ans);
