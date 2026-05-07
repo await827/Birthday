@@ -358,20 +358,7 @@ function finishQuestion() {
   }
 }
 
-function finishQuestion() {
 
-  currentQ++;
-
-  if (currentQ < questions.length) {
-    showQuestion();
-  } else {
-
-    document.getElementById("options").style.display = "none";
-    document.getElementById("questionText").style.display = "none";
-    document.getElementById("nextBtn").style.display = "none";
-    document.getElementById("answerInput").style.display = "none";
-  }
-}
 function nextQuestion() {
 
   let ans = document.getElementById("answerInput").value;
@@ -396,7 +383,7 @@ function nextQuestion() {
     showQuestion();
   } else {
     console.log(answers);
-  
+  }
 }
 </script>
 </body>
