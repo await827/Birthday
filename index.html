@@ -319,15 +319,16 @@ function closePopup() {
 
   document.getElementById("popup").style.display = "none";
 
-  if (currentQ === 5) {
-    currentQ++;
-  }
+  currentQ++;
 
   if (currentQ < questions.length) {
     showQuestion();
   } else {
 
     document.getElementById("options").style.display = "none";
+    document.getElementById("questionText").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("answerInput").style.display = "none";
   }
 }
     
@@ -383,8 +384,6 @@ function nextQuestion() {
   } else {
     console.log(answers);
   }
-}
-
 }
 </script>
 </body>
