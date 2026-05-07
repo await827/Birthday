@@ -303,26 +303,19 @@ function chooseAnswer() {
 
     document.getElementById("popupText").innerText =
       "Meeting me is the right answer 💖😌";
-document.getElementById("popup").style.display = "block";
-  
+
+    document.getElementById("popup").style.display = "block";
+
+    return;
   }
 
-  // QUESTION 3 → NO POPUP
+  // QUESTION 3
   else if (currentQ === 2) {
 
     currentQ++;
 
     if (currentQ < questions.length) {
       showQuestion();
-    } else {
-      
-
-      document.getElementById("options").style.display = "none";
-
-      document.getElementById("answerInput").style.display = "none";
-
-      document.getElementById("nextBtn").style.display = "none";
-      document.getElementById("questionText").style.display = "none";
     }
   }
 }
@@ -331,7 +324,13 @@ function closePopup() {
 
   document.getElementById("popup").style.display = "none";
 
-  // ONLY show next question
+  // popup from question 2
+  if (currentQ === 1) {
+    currentQ++;
+  }
+
+  // popup from question 6 already incremented in nextQuestion()
+  
   if (currentQ < questions.length) {
     showQuestion();
   } else {
