@@ -252,8 +252,7 @@ function chooseAnswer() {
     if (currentQ < questions.length) {
       showQuestion();
     } else {
-
-      document.getElementById("questionText").innerText = "Done 🎉";
+      
 
       document.getElementById("options").style.display = "none";
 
@@ -262,10 +261,7 @@ function chooseAnswer() {
       document.getElementById("nextBtn").style.display = "none";
     }
   }
-}
 
-  document.getElementById("popup").style.display = "block";
-}
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 
@@ -274,7 +270,7 @@ function closePopup() {
   if (currentQ < questions.length) {
     showQuestion();
   } else {
-    document.getElementById("questionText").innerText = "Done 🎉";
+    
     document.getElementById("options").style.display = "none";
   }
 }
