@@ -367,14 +367,14 @@ function nextQuestion() {
   // QUESTION 6 POPUP
   if (currentQ === 5) {
 
-  document.getElementById("popupText").innerText =
-    "I know it's me I'm just asking for formalities 😌💖";
+    document.getElementById("popupText").innerText =
+      "I know it's me I'm just asking for formalities 😌💖";
 
-  document.getElementById("popup").style.display = "block";
+    document.getElementById("popup").style.display = "block";
 
-  currentQ++;
+    currentQ++;
 
-  return;
+    return;
   }
 
   currentQ++;
@@ -382,7 +382,13 @@ function nextQuestion() {
   if (currentQ < questions.length) {
     showQuestion();
   } else {
+
     console.log(answers);
+
+    document.getElementById("options").style.display = "none";
+    document.getElementById("questionText").style.display = "none";
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("answerInput").style.display = "none";
   }
 }
 </script>
