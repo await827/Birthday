@@ -326,10 +326,12 @@ document.getElementById("popup").style.display = "block";
     }
   }
 }
+
 function closePopup() {
 
   document.getElementById("popup").style.display = "none";
 
+  // ONLY show next question
   if (currentQ < questions.length) {
     showQuestion();
   } else {
