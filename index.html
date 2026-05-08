@@ -302,53 +302,60 @@ else if (currentQ === 7) {
   document.getElementById("answerInput").style.display = "none";
   document.getElementById("nextBtn").style.display = "none";
 
-  document.getElementById("options").style.display = "grid";
+  let options = document.getElementById("options");
 
-  document.getElementById("options").style.gridTemplateColumns = "1fr 1fr";
+  options.style.display = "grid";
+  options.style.gridTemplateColumns = "1fr 1fr";
+  options.style.justifyItems = "center";
+  options.style.alignItems = "center";
+  options.style.rowGap = "20px";
+  options.style.columnGap = "10px";
 
-  document.getElementById("options").style.gap = "15px";
+  options.style.top = "48%";
+  options.style.left = "50%";
+  options.style.transform = "translateX(-50%)";
 
-  document.getElementById("options").style.top = "45%";
+  options.style.width = "85%";
 
-  document.getElementById("options").innerHTML = `
+  options.innerHTML = `
 
     <img src="photo1.jpg"
     onclick="finishQuestion()"
     style="
-      width:150px;
-      height:150px;
+      width:130px;
+      height:130px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:18px;
       cursor:pointer;
     ">
 
     <img src="photo2.jpg"
     onclick="finishQuestion()"
     style="
-      width:150px;
-      height:150px;
+      width:130px;
+      height:130px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:18px;
       cursor:pointer;
     ">
 
     <img src="photo3.jpg"
     onclick="finishQuestion()"
     style="
-      width:150px;
-      height:150px;
+      width:130px;
+      height:130px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:18px;
       cursor:pointer;
     ">
 
     <img src="photo4.jpg"
     onclick="finishQuestion()"
     style="
-      width:150px;
-      height:150px;
+      width:130px;
+      height:130px;
       object-fit:cover;
-      border-radius:20px;
+      border-radius:18px;
       cursor:pointer;
     ">
   `;
